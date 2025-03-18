@@ -30,13 +30,40 @@ public class Constructor {
     Constructor() {
         System.out.println("NoArgsConstructor(기본생성자)");
     }
-        //매개변수 생성자 -> 기본적으로 만들어지지 않습니다. 개발자가 정의해야함.
-        // 근데 그 경우에 기본 생성자와 매개변수 생성자 둘다 쓰고싶다면
-        // 기본 생성자도 정의해야함.
+    //매개변수 생성자 -> 기본적으로 만들어지지 않습니다. 개발자가 정의해야함.
+    // 근데 그 경우에 기본 생성자와 매개변수 생성자 둘다 쓰고싶다면
+    // 기본 생성자도 정의해야함.
 
-    Constructor( int number){
+    Constructor(int number) {
         System.out.println("RequiredArgsConstructor(int 매개변수를 필수로 요구하는 생성자)");
         this.num = number;  // this : 해당 클래스에서 객체를 만들게 되면 객체 이름으로 대체됨.
+    }
+
+    // String title 을 매개변수로 하는 생성자를 정의하고,
+    // RequiredArgsConstructor(String 매개변수를 필수로 요구하는 생성자)라는 안내문을 출력할수 있도록 작성한 뒤
+    // constructorMain으로 가셔서 constroctor4 라는 객체명을 지니고. title에 이름으로 지어 객체를 생성한 뒤
+    // sout constrortor.name을 입력
+
+    Constructor(String title) {
+        this.name = title;
+        System.out.println("RequiredArgsConstructor(String 매개변수를 필수로 요구하는 생성자)");
+    }
+
+
+    //두개 이상의 매개변수를 지니는 생성자
+    Constructor(int num, String name) {
+        this.num = num;
+        this.name = name;
+        System.out.println("AllArgsConstructor(int, String)");
 
     }
+
+        // method를 정의
+        void showInfo () {
+            System.out.println("이 객체의 num값 ; " + num);
+            System.out.println("이 객체의 name값 ; " + name);
+        }
+
+
+
 }
