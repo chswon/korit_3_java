@@ -28,12 +28,21 @@ public class Main {
 
         phoneFactory1.setName("삼성 스마트폰 공장");    //Factory에서 override 안한 메서드를 호출함
         phoneFactory1.displayInfo();                 // 얘도
-
+        System.out.println();
         //즉 오버라이딩은 '재정의'를 전제로 부모 클래스와 자식 클래스의 메서드가
         // 서로 다른 방식으로 굴러갈 경우에만 이루어지면되고.
         // 부모 클래스의 메서드를 완전히 동일하게 자식 클래스에서 사용할 경우에는
         // 굳이 alt + ins를 통해서 override method를 할 필요가 없습니다.
 
 
+        TablitFactory tablitFactory1 = new TablitFactory("애플 태블릿 공장");
+
+
+        tablitFactory1.setName("구글 태블릿 공장");
+        System.out.println("현재 공장은 " + tablitFactory1.getName() + "으로 변경되었습니다.");
+
+        tablitFactory1.produce("구글 태블릿");
+        tablitFactory1.manage();
+        tablitFactory1.upgrade("구글 태블릿 10인치 2세대");
     }
 }
