@@ -17,6 +17,7 @@ public class Main {
         TvRemoteController tvRemoteController = new TvRemoteController(
                 new PowerButton(), new ChannelDownButton(), new ChannelUpButton(), new VolumeDownButton(), new VolumeUpButton());
 
+        ACController acController = new ACController(new TempDownButton(), new TempUpButton());
 
         tvRemoteController.onPressedPowerButton();
         tvRemoteController.onPressedPowerButton();
@@ -32,6 +33,13 @@ public class Main {
         System.out.println();
         tvRemoteController.onPressedVolumeUpButton();
 
+              System.out.println();
+        tvRemoteController.onPressedPowerButton();
+        acController.onPressTempDownButton();
+        acController.onDownTempDownButton();
+        acController.onPressTempUpButton();
+        acController.onUpTempUpButton();
+        tvRemoteController.onPressedPowerButton();
 
 
 

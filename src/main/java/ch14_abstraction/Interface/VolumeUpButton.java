@@ -9,7 +9,6 @@ public class VolumeUpButton extends Button{
 
     @Override
     public String onUp() {
-        System.out.println("음량을 계속 올립니다.");
-        return null;
+        return  "음량을 계속 " + super.onUp();
     }
 }
